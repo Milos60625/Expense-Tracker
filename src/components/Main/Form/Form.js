@@ -14,7 +14,7 @@ import {
   incomeCategories,
   expenseCategories,
 } from "../../../constants/categories";
-import formatDate from '../../../utils/formatDate'
+import formatDate from "../../../utils/formatDate";
 import useStyles from "./styles";
 import { v4 as uuidv4 } from "uuid";
 const initialState = {
@@ -29,6 +29,9 @@ const Form = () => {
   const [formData, setFormData] = useState(initialState);
   const { addTransaction } = useContext(ExpenseTrackerContext);
   const createTransaction = () => {
+    if (Number.isNaN(Number(formData.amount)) || !formData.date.includes("-"))
+      return;
+
     const transaction = {
       ...formData,
       amount: Number(formData.amount),
