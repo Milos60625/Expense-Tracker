@@ -8,6 +8,6 @@ Expense tracker is the name says is an application that helps you keep track of 
 * Chart.js
 * Material UI 
 
-[Deployed] (https://awesome-lamarr-fd6073.netlify.app/)
+*  [Deployed] (https://awesome-lamarr-fd6073.netlify.app/)
 
-To run the application `npm install` and `npm run`
+To run the application `npm install` and `npm start`
