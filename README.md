@@ -1,6 +1,6 @@
 # Expense Tracker
 
-Expense tracker is the name says is an application that helps you keep track of your budget. 
+Expense tracker is an application that helps you keep track of your budget. 
 
 ## Technologies
 
