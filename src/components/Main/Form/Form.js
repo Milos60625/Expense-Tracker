@@ -39,7 +39,7 @@ const Form = () => {
       amount: Number(formData.amount),
       id: uuidv4(),
     };
-    setOpen(true)
+    setOpen(true);
     addTransaction(transaction);
     setFormData(initialState);
   };
@@ -57,7 +57,7 @@ const Form = () => {
         ></Typography>
       </Grid>
       <Grid item xs={6}>
-        <FormControl fullWidth >
+        <FormControl fullWidth>
           <InputLabel>Type</InputLabel>
           <Select
             value={formData.type}
@@ -65,7 +65,7 @@ const Form = () => {
               setFormData({ ...formData, type: event.target.value })
             }
           >
-            <MenuItem value="Income" >Income</MenuItem>
+            <MenuItem value="Income">Income</MenuItem>
             <MenuItem value="Expense">Expense</MenuItem>
           </Select>
         </FormControl>
@@ -73,7 +73,7 @@ const Form = () => {
       <Grid item xs={6}>
         <FormControl fullWidth>
           <InputLabel>Category</InputLabel>
-          <Select
+          <Select 
             value={formData.category}
             onChange={(event) =>
               setFormData({ ...formData, category: event.target.value })
@@ -115,7 +115,6 @@ const Form = () => {
         color="primary"
         fullWidth
         onClick={createTransaction}
-
       >
         Create
       </Button>

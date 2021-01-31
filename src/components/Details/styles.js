@@ -10,7 +10,10 @@ export default makeStyles(() => ({
     expense: {
             borderBottom: '20px solid rgba(255, 0, 0, 0.5)',
             background: '#fff6e5',
-
+            alignContent: 'center'
 
     },
+    card: {
+        
+    }
 }))
