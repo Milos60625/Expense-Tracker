@@ -10,7 +10,7 @@ import {
   Slide,
 } from "@material-ui/core";
 import { ExpenseTrackerContext} from '../../../context/context'
-import { Delete, MoneyOff } from "@material-ui/icons";
+import { Delete, AttachMoney } from "@material-ui/icons";
 import useStyles from "./styles";
 const List = () => {
   const classes = useStyles();
@@ -29,8 +29,8 @@ const List = () => {
         >
           <ListItem>
             <ListItemAvatar>
-              <Avatar className={transaction.type === 'Income' ? classes.avatarIncome : classes.avatarExpense}>
-                  <MoneyOff />
+              <Avatar className={transaction.type === 'Income' ? classes.avatarIncome : classes.avatarExpense} >
+                  <AttachMoney />
               </Avatar>
             </ListItemAvatar>
             <ListItemText primary={transaction.category} secondary={`$${transaction.amount} - ${transaction.date}`} />

@@ -17,6 +17,7 @@ import {
 import formatDate from "../../../utils/formatDate";
 import useStyles from "./styles";
 import { v4 as uuidv4 } from "uuid";
+import CustomizedSnackBar from "../../SnackBar/SnackBar";
 const initialState = {
   amount: "",
   category: "",
@@ -28,6 +29,7 @@ const Form = () => {
   const classes = useStyles();
   const [formData, setFormData] = useState(initialState);
   const { addTransaction } = useContext(ExpenseTrackerContext);
+  const [open, setOpen] = useState(false);
   const createTransaction = () => {
     if (Number.isNaN(Number(formData.amount)) || !formData.date.includes("-"))
       return;
@@ -37,6 +39,7 @@ const Form = () => {
       amount: Number(formData.amount),
       id: uuidv4(),
     };
+    setOpen(true)
     addTransaction(transaction);
     setFormData(initialState);
   };
@@ -45,6 +48,7 @@ const Form = () => {
 
   return (
     <Grid container spacing={2}>
+      <CustomizedSnackBar open={open} setOpen={setOpen} />
       <Grid item xs={12}>
         <Typography
           align="center"
