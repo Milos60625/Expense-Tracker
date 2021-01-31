@@ -57,7 +57,7 @@ const Form = () => {
         ></Typography>
       </Grid>
       <Grid item xs={6}>
-        <FormControl fullWidth>
+        <FormControl fullWidth >
           <InputLabel>Type</InputLabel>
           <Select
             value={formData.type}
@@ -65,7 +65,7 @@ const Form = () => {
               setFormData({ ...formData, type: event.target.value })
             }
           >
-            <MenuItem value="Income">Income</MenuItem>
+            <MenuItem value="Income" >Income</MenuItem>
             <MenuItem value="Expense">Expense</MenuItem>
           </Select>
         </FormControl>
@@ -111,10 +111,11 @@ const Form = () => {
       </Grid>
       <Button
         className={classes.button}
-        variant="outlined"
+        variant="contained"
         color="primary"
         fullWidth
         onClick={createTransaction}
+
       >
         Create
       </Button>

@@ -15,8 +15,8 @@ function Main() {
   const classes = useStyles();
   const {balance} = useContext(ExpenseTrackerContext)
   return (
-    <Card className={classes.root}>
-      <CardHeader title="Expense Tracker" />
+    <Card className={classes.root} >
+      <CardHeader title="Expense Tracker" align='center'  />
       <CardContent>
         <Typography align="center" variant="h5">
           Total Balance $ {balance}

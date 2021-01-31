@@ -4,6 +4,7 @@ export default makeStyles((theme) => ({
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
+    
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -11,14 +12,19 @@ export default makeStyles((theme) => ({
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
+    
   },
   expandOpen: {
     transform: 'rotate(180deg)',
   },
   cardContent: {
     paddingTop: 0,
+    
   },
   divider: {
     margin: '20px 0',
   },
+  root: {
+    background: '#EAE1DF'
+  }
 }));
